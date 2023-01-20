@@ -11,6 +11,7 @@
 #include "lpc17xx.h"
 #include "timer.h"
 #include "../GLCD/GLCD.h"
+#include "../TouchPanel/TouchPanel.h"
 
 /******************************************************************************
 ** Function name:		Timer0_IRQHandler
@@ -29,6 +30,9 @@ volatile int snack = 0;
 
 extern int update;
 extern int removeBar;
+
+
+int clear = 0;
 
 void TIMER0_IRQHandler(void)
 {
@@ -79,10 +83,19 @@ void TIMER0_IRQHandler(void)
 ** Returned value:		None
 **
 ******************************************************************************/
-void TIMER1_IRQHandler(void)
+void TIMER2_IRQHandler(void)
 {
-
-	LPC_TIM1->IR = 1; /* clear interrupt flag */
+	
+	//Match register 0
+	if (LPC_TIM2->IR & 01){
+	if(getDisplayPoint(&display, Read_Ads7846(), &matrix )){
+		if(display.y < 280){
+			TP_DrawPoint(display.x,display.y);
+			draw_rectangle_full(100, 100, 100, 100, 100);
+			}
+		}
+	}
+	LPC_TIM2->IR = 1; /* clear interrupt flag */
 	return;
 }
 
@@ -95,24 +108,24 @@ void TIMER1_IRQHandler(void)
 ** Returned value:		None
 **
 ******************************************************************************/
-void TIMER2_IRQHandler(void)
-{
+//void TIMER2_IRQHandler(void)
+//{
 
 	// matchreg0
-	if (LPC_TIM2->IR == 1)
-	{
+	//if (LPC_TIM2->IR == 1)
+	//{
 
-		LPC_TIM2->IR = 1; /* clear interrupt flag */
-	}
+		//LPC_TIM2->IR = 1; /* clear interrupt flag */
+	//}
 	/* Match register 1 interrupt service routine */
-	else if (LPC_TIM2->IR == 2)
-	{
+	//else if (LPC_TIM2->IR == 2)
+	//{
 
-		LPC_TIM2->IR = 2; /* clear interrupt flag */
-	}
+		//LPC_TIM2->IR = 2; /* clear interrupt flag */
+	//}
 
-	return;
-}
+	//return;
+//}
 
 /******************************************************************************
 **                            End Of File

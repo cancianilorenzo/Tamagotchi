@@ -1,7 +1,7 @@
 Dependencies for Project 'sample', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
-F (.\startup_LPC17xx.s)(0x63B46250)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include--pd "__UVISION_VERSION SETA 533" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1" --pd "_RTE_ SETA 1"--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
-F (.\sample.c)(0x63BC2C39)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\sample.o --omf_browse .\sample.crf --depend .\sample.d)
+F (.\startup_LPC17xx.s)(0x63CB0970)(--cpu Cortex-M3 --pd "__EVAL SETA 1" -g --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include--pd "__UVISION_VERSION SETA 533" --pd "_RTE_ SETA 1" --pd "LPC175x_6x SETA 1" --pd "_RTE_ SETA 1"--list .\startup_lpc17xx.lst --xref -o .\startup_lpc17xx.o --depend .\startup_lpc17xx.d)
+F (.\sample.c)(0x63CB09CF)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\sample.o --omf_browse .\sample.crf --depend .\sample.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9122)
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626FAD4E)
@@ -16,6 +16,7 @@ I (timer/timer.h)(0x63B46250)
 I (Support/support.h)(0x63B70F39)
 I (joystick/joystick.h)(0x63B46250)
 I (RIT/RIT.h)(0x63B46250)
+I (TouchPanel/TouchPanel.h)(0x5E131400)
 F (.\core_cm3.c)(0x63B46250)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\core_cm3.o --omf_browse .\core_cm3.crf --depend .\core_cm3.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E9122)
 F (.\system_LPC17xx.c)(0x63B46250)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\system_lpc17xx.o --omf_browse .\system_lpc17xx.crf --depend .\system_lpc17xx.d)
@@ -27,7 +28,7 @@ I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\c
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626FAD4E)
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FAD4E)
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
-F (.\timer\IRQ_timer.c)(0x63BB2A7F)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_timer.o --omf_browse .\irq_timer.crf --depend .\irq_timer.d)
+F (.\timer\IRQ_timer.c)(0x63CB09DE)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\irq_timer.o --omf_browse .\irq_timer.crf --depend .\irq_timer.d)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E9122)
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626FAD4E)
@@ -39,7 +40,8 @@ I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\m
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (timer\timer.h)(0x63B46250)
 I (timer\../GLCD/GLCD.h)(0x63BADB65)
-F (.\timer\lib_timer.c)(0x63B46250)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_timer.o --omf_browse .\lib_timer.crf --depend .\lib_timer.d)
+I (timer\../TouchPanel/TouchPanel.h)(0x5E131400)
+F (.\timer\lib_timer.c)(0x63CB07F1)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\lib_timer.o --omf_browse .\lib_timer.crf --depend .\lib_timer.d)
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\lpc17xx.h)(0x5E1DC4B4)
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626FAD4E)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E9122)
@@ -54,7 +56,7 @@ F (.\GLCD\AsciiLib.c)(0x63B46250)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apc
 I (GLCD\AsciiLib.h)(0x63B46250)
 I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E9122)
 F (.\GLCD\AsciiLib.h)(0x63B46250)()
-F (.\GLCD\GLCD.c)(0x63BADBF1)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\glcd.o --omf_browse .\glcd.crf --depend .\glcd.d)
+F (.\GLCD\GLCD.c)(0x63CB018E)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\glcd.o --omf_browse .\glcd.crf --depend .\glcd.d)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5E8E9122)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5E8E9122)
 I (GLCD\GLCD.h)(0x63BADB65)
@@ -71,6 +73,7 @@ I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x5E8E9122)
 I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5E8E9122)
 I (GLCD\../timer/timer.h)(0x63B46250)
 I (GLCD\../RIT/RIT.h)(0x63B46250)
+I (GLCD\../TouchPanel/TouchPanel.h)(0x5E131400)
 F (.\GLCD\GLCD.h)(0x63BADB65)()
 F (.\GLCD\HzLib.c)(0x63B46250)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\hzlib.o --omf_browse .\hzlib.crf --depend .\hzlib.d)
 I (GLCD\HzLib.h)(0x63B46250)
@@ -123,3 +126,15 @@ I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\m
 I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
 I (Support\../GLCD/GLCD.h)(0x63BADB65)
 F (.\Support\support.h)(0x63B70F39)()
+F (.\TouchPanel\TouchPanel.c)(0x63CAFF2B)(--c99 -c --cpu Cortex-M3 -D__EVAL -g -O1 --apcs=interwork -I.\RTE\_Target_1-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include-IC:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include-D__UVISION_VERSION="533" -D_RTE_ -DLPC175x_6x -D_RTE_ -DSIMULATOR-o .\touchpanel.o --omf_browse .\touchpanel.crf --depend .\touchpanel.d)
+I (TouchPanel\../GLCD/GLCD.h)(0x63BADB65)
+I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\LPC17xx.h)(0x5E1DC4B4)
+I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm3.h)(0x626FAD4E)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5E8E9122)
+I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626FAD4E)
+I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626FAD4E)
+I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armcc.h)(0x626FAD4E)
+I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626FAD4E)
+I (C:\Users\Lorenzo\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.1\Device\Include\system_LPC17xx.h)(0x58493F92)
+I (TouchPanel\../TouchPanel/TouchPanel.h)(0x5E131400)
+F (.\TouchPanel\TouchPanel.h)(0x5E131400)()

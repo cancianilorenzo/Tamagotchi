@@ -13,3 +13,4 @@
 .\sample.o: Support/support.h
 .\sample.o: joystick/joystick.h
 .\sample.o: RIT/RIT.h
+.\sample.o: TouchPanel/TouchPanel.h

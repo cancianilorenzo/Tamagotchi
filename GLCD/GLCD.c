@@ -27,6 +27,7 @@
 #include <math.h>
 #include "../timer/timer.h"
 #include "../RIT/RIT.h"
+#include "../TouchPanel/TouchPanel.h"
 
 /* Private variables ---------------------------------------------------------*/
 static uint8_t LCD_Code;

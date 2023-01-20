@@ -24,12 +24,15 @@
 
 #include <stdio.h>
 #include "LPC17xx.h"
+
 #include "GLCD/GLCD.h"
 #include "timer/timer.h"
 #include "Support/support.h"
 
 #include "joystick/joystick.h"
 #include "RIT/RIT.h"
+
+#include "TouchPanel/TouchPanel.h"
 
 #define SIMULATOR 1
 
@@ -64,6 +67,8 @@ int main(void)
 	SystemInit();	 /* System Initialization (i.e., PLL)  */
 	joystick_init(); /* Joystick Initialization            */
 	LCD_Initialization();
+	TP_Init();
+	TouchPanel_Calibrate();
 	startGame();
 
 	while (1)
@@ -254,6 +259,8 @@ void startGame(void){
 
 	init_timer(0, 0, 0, 3, 0x017D7840); // 1 secondo
 	enable_timer(0);
+	init_timer(2, 0, 0, 3, 0x1312D0); // 50 ms
+	enable_timer(2);
 }
 
 

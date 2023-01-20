@@ -15,3 +15,4 @@
 .\glcd.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
 .\glcd.o: GLCD\../timer/timer.h
 .\glcd.o: GLCD\../RIT/RIT.h
+.\glcd.o: GLCD\../TouchPanel/TouchPanel.h
