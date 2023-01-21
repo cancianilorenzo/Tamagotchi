@@ -55,6 +55,7 @@ extern int hours, minutes, seconds;
 int oldHours, oldMinutes;
 extern int select, left, right;
 extern int snack;
+extern int cuddles;
 
 
 void update_time(void);
@@ -73,6 +74,29 @@ int main(void)
 
 	while (1)
 	{
+		if(cuddles == 1){
+			LCD_DrawCircle(70, 170, 3, Red);
+			LCD_DrawCircle(115, 215, 3, Red);
+			LCD_DrawCircle(80, 150, 3, Red);
+			LCD_DrawCircle(30, 200, 3, Red);
+			LCD_DrawCircle(200, 130, 3, Red);
+			LCD_DrawCircle(170, 150, 3, Red);
+			GUI_Text(100, 110, (uint8_t *) "Cuddles",Black, White);
+		}
+		if(cuddles == 3){
+			GUI_Text(100, 110, (uint8_t *) "                    ",Black, White);
+			LCD_DrawCircle(70, 170, 3, White);
+			LCD_DrawCircle(115, 215, 3, White);
+			LCD_DrawCircle(80, 150, 3, White);
+			LCD_DrawCircle(30, 200, 3, White);
+			LCD_DrawCircle(200, 130, 3, White);
+			LCD_DrawCircle(170, 150, 3, White);
+			battery_management(0,current_happiness+1,1);
+			cuddles = 0;
+		//Stop cuddles
+		//Edit animation
+		//Increment bar
+		}
 		if(update == 1 && end == 0 && snack == 0){
 			update = ~update;
 			update_time();
@@ -154,7 +178,7 @@ int main(void)
 		LCD_DrawLine(130, 190,130,195, White); //accorcio gamba
 		LCD_DrawLine(110, 180,110,195, Black); //allungo gamba	
 		}
-		if(end == 1 && snack == 0){
+ 		if(end == 1 && snack == 0){
 			end = 2;
 			disable_timer(0);
 			draw_rectangle(130,150,5,5,White); //occhio
@@ -230,6 +254,10 @@ void startGame(void){
 	draw_rectangle(130,150,5,5,Black); //occhio
 	draw_rectangle(110,150,5,5,Black); //occhio
 	draw_rectangle(120,160,40,40,Black);
+	
+	
+	//draw_rectangle(120,165,100,100,Red);
+	
 	LCD_DrawLine(130, 180,130,190, Black); //accorcio gamba
 	
 	LCD_DrawLine(130, 190,130,195, White); //accorcio gamba

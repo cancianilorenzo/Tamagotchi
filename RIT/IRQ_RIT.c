@@ -14,6 +14,8 @@
 #include "../joystick/joystick.h"
 #include "../timer/timer.h"
 
+#include "../TouchPanel/TouchPanel.h"
+
 /******************************************************************************
 ** Function name:		RIT_IRQHandler
 **
@@ -31,6 +33,8 @@ extern int seconds, hours, minutes;
 volatile int select, left, right;
 volatile int left = 0;
 volatile int right = 0;
+
+
 
 void RIT_IRQHandler(void)
 {
@@ -52,6 +56,12 @@ void RIT_IRQHandler(void)
 		right = 1;
 		left = 0;
 	}
+	
+	/*if(getDisplayPoint(&display, Read_Ads7846(), &matrix )){
+	if(display.y < 280){
+		cuddles = 1;
+		}
+	}*/
 
 	reset_RIT();
 	LPC_RIT->RICTRL |= 0x1; /* clear interrupt flag */

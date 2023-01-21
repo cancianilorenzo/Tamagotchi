@@ -13,6 +13,7 @@
 #include "../GLCD/GLCD.h"
 #include "../TouchPanel/TouchPanel.h"
 
+
 /******************************************************************************
 ** Function name:		Timer0_IRQHandler
 **
@@ -30,6 +31,8 @@ volatile int snack = 0;
 
 extern int update;
 extern int removeBar;
+
+volatile int cuddles = 0;
 
 
 int clear = 0;
@@ -65,6 +68,9 @@ void TIMER0_IRQHandler(void)
 		if(snack == 1){
 		snack++;
 		}
+		if(cuddles == 1 || cuddles == 2){
+		cuddles++;
+		}
 		seconds++;
 		update = 1;
 
@@ -89,9 +95,10 @@ void TIMER2_IRQHandler(void)
 	//Match register 0
 	if (LPC_TIM2->IR & 01){
 	if(getDisplayPoint(&display, Read_Ads7846(), &matrix )){
-		if(display.y < 280){
-			TP_DrawPoint(display.x,display.y);
-			draw_rectangle_full(100, 100, 100, 100, 100);
+		if((display.x < 170 && display.x > 70) && (display.y < 215 && display.y > 115)){
+			cuddles = 1;
+			//TP_DrawPoint(display.x,display.y);
+			//draw_rectangle_full(100, 100, 100, 100, 100);
 			}
 		}
 	}
