@@ -14,3 +14,5 @@
 .\sample.o: joystick/joystick.h
 .\sample.o: RIT/RIT.h
 .\sample.o: TouchPanel/TouchPanel.h
+.\sample.o: adc/adc.h
+.\sample.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

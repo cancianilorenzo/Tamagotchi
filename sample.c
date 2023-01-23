@@ -33,6 +33,7 @@
 #include "RIT/RIT.h"
 
 #include "TouchPanel/TouchPanel.h"
+#include "adc/adc.h"
 
 #define SIMULATOR 1
 
@@ -56,6 +57,7 @@ int oldHours, oldMinutes;
 extern int select, left, right;
 extern int snack;
 extern int cuddles;
+extern int volume;
 
 
 void update_time(void);
@@ -64,12 +66,18 @@ void startGame(void);
 void moveSnack(void);
 
 int main(void)
-     {
+{
 	SystemInit();	 /* System Initialization (i.e., PLL)  */
 	joystick_init(); /* Joystick Initialization            */
 	LCD_Initialization();
 	TP_Init();
 	TouchPanel_Calibrate();
+	ADC_init();	
+			 
+	LPC_PINCON->PINSEL1 |= (1<<21);
+	LPC_PINCON->PINSEL1 &= ~(1<<20);
+	LPC_GPIO0->FIODIR |= (1<<26);
+			 
 	startGame();
 
 	while (1)
@@ -93,12 +101,16 @@ int main(void)
 			LCD_DrawCircle(170, 150, 3, White);
 			battery_management(0,current_happiness+1,1);
 			cuddles = 0;
-		//Stop cuddles
-		//Edit animation
-		//Increment bar
 		}
 		if(update == 1 && end == 0 && snack == 0){
 			update = ~update;
+			/*
+			//temporaneo
+			char b[20];
+			sprintf(b, "%d", volume);
+			GUI_Text(100, 0, (uint8_t *)b, Black, White);
+			*/
+		
 			update_time();
 			if(disegno == 1){
 				LCD_DrawLine(110, 190,110,195, White); //accorcio gamba
@@ -154,7 +166,7 @@ int main(void)
 		if(end == 0 && snack == 2){
 		update_time();
 		}
-		if(end == 0 && snack == 3){
+ 		if(end == 0 && snack == 3){
 		snack = 0;
 		update_time();
 		draw_rectangle_full(220, 200, 20, 20, White);
